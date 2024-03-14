@@ -33,7 +33,6 @@ export default function Favorite() {
       <LoadingScreen/>
       <Tabs variant="scrollable" value={value} onChange={handleChange}>
         <Tab label="Favorite Note" />
-        <Tab label="Favorite Movie" />
       </Tabs>
 
       {/* Shows Fav Notes */}
@@ -63,11 +62,7 @@ export default function Favorite() {
           )}
         </div>
       </TabPanel>
-      
-      {/* Show fav movie */}
-      <TabPanel value={value} index={1}>
-        <h1>Recommended Movies here</h1>
-      </TabPanel>
+
     </div>
   );
 }

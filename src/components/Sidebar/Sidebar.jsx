@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import { ListItemButton } from "@mui/material";
 import "./Sidebar.css";
 
-const pages = ["Diary", "Statistics", "Favorites", "Movies"];
+const pages = ["Diary", "Statistics", "Favorites"];
 
 const Sidebar = ({ className, onMouseEnter, onMouseLeave }) => {
   const generateHref = (page) => {

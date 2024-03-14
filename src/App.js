@@ -1,6 +1,6 @@
 import React, {lazy} from 'react';
 import {Routes, Route} from 'react-router-dom'
-import { Home, Diary, Login, Register, Statistics, NoteStat, Profile, Recommendation, Favorite, Protected } from './pages';
+import { Home, Diary, Login, Register, Statistics, NoteStat, Profile, Favorite, Protected } from './pages';
 import { useLoading } from './utils/hooks/useLoading';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,10 +44,6 @@ function App() {
 
         <Route path="/statistics/note/:noteId" location="/diary" element={<PrivateRoute/>} >
           <Route path="/statistics/note/:noteId" element={<NoteStat />} />
-        </Route>
-
-        <Route path="/movies" location="/movies" element={<PrivateRoute/>} >
-          <Route path="/movies" element={<Recommendation />} />
         </Route>
 
       </Routes>

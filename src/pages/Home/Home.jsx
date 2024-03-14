@@ -41,8 +41,7 @@ export default function Home() {
             <div className="home-title-desc popup-anim text--left">
               Write down your deep down feelings in our secure note app.
               <br /> <br />
-              Watch the movies that match your sentiments and reduce time
-              surfing OTTs.
+              Linking Lives, One Shared Experience at a Time
             </div>
           </div>
         </div>
@@ -104,8 +103,7 @@ export default function Home() {
               diary and you can keep all types of notes you want to!
             </div>
             <div className="confused-point">
-              <span className="emotesBullet">💡</span> Instead, we'll recommend
-              you entertainment material according to your mood.
+              <span className="emotesBullet">💡</span> Instead, we'll connect you with people according to your mood.
             </div>
           </div>
         </Fade>
@@ -133,8 +131,7 @@ export default function Home() {
 
               <div className="step-header text--center">That's It</div>
               <div className="step-content text--center">
-                Start writing your diaries and watch movies at your lowest
-                points of life!
+                Start writing your diaries and bridge your emotions through Text
               </div>
             </div>
           </div>
@@ -159,8 +156,7 @@ export default function Home() {
             </div>
             <div className="extra-features-content">
               <Filter3RoundedIcon sx={{ fontSize: "3rem" }} />
-              Surf only the movies filtered specially for you to cheer up at the
-              moments you need love the most.
+              For you to cheer up at the moments you need love the most.
             </div>
           </Fade>
         </div>
