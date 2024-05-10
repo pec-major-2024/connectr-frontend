@@ -156,8 +156,18 @@ export default function Note({
             color="secondary"
             onClick={() => navigate(`/statistics/note/${noteId}`)}
             size={"normal"}
+            style={{ marginRight: '10px', width: '120px' }}
           >
             View Stats
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={() => navigate(`/matches`)}
+            size={"normal"}
+            style={{ marginRight: '10px', width: '120px' }}
+          >
+            Matches
           </Button>
 
           {fav ? (

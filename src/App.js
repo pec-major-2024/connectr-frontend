@@ -6,6 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 import PrivateRoute from './PrivateRoute';
+import Matches from './pages/Matches/Matches';
 
 function App() {
   const {LoadingScreen} = useLoading();
@@ -32,6 +33,9 @@ function App() {
 
         <Route path="/statistics" location="/statistics" element={<PrivateRoute/>} >
           <Route path="/statistics" element={<Statistics />} />
+        </Route>
+        <Route path="/matches" location="/matches" element={<PrivateRoute/>} >
+          <Route path="/matches" element={<Matches />} />
         </Route>
 
         <Route path="/favorites" location="/favorites" element={<PrivateRoute/>} >
