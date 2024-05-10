@@ -88,11 +88,12 @@ export default function NoteStat() {
   }, [emotion]);
 
   return (
-    <Box>
+    <Box style={{backgroundColor:'#C0C5C1'}}>
       <LoadingScreen/>
       <Sidebar />
-      <div className="noteInfo">
+      <div className="noteInfo" style={{backgroundColor:'#C0C5C1', marginTop:'11%',marginBottom:'13%'}}>
         <Cards
+        style={{backgroundColor:'#3F334D'}}
           noteId={noteId}
           date={new Date(note?.updatedAt).toLocaleDateString("en-GB")}
           time={new Date(note?.updatedAt).toLocaleTimeString("en-GB")}
@@ -107,6 +108,7 @@ export default function NoteStat() {
             color="secondary"
             size="normal"
             onClick={fetchEmotion}
+            style={{backgroundColor:'#C0C5C1',color:'black'}}
             // sx={{ margin: "auto" }}
           >
             Generate Stats Now

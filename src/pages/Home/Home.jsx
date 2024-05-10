@@ -15,11 +15,15 @@ import "./Home.css";
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div className="home-container" >
       <Sidebar />
       <footer
         className="text--center"
-        style={{ paddingTop: "10px", paddingBottom: "10px" }}
+        
+        style={{ paddingTop: "10px", paddingBottom: "10px" ,
+        backgroundColor: "black", 
+        color: "#fff" 
+        }}
       >
         <Link to="/aboutUs" style={{ color: "#fff", textDecoration: "none" }}>
           About the Developers
@@ -48,8 +52,8 @@ export default function Home() {
       </Fade>
 
       {/* CONFUSED PERSON AND QUESTIONS */}
-      <div className="confused-point-container altText">
-        <Fade triggerOnce>
+      <div className="confused-point-container altText" style={{backgroundColor:"#574B60"}}>
+        <Fade triggerOnce style={{backgroundColor:"#574B60"}}>
           <div className="confused-points">
             <div className="confused-header text--center">Questions</div>
             <div className="confused-point">
@@ -68,7 +72,7 @@ export default function Home() {
           </div>
         </Fade>
 
-        <Fade triggerOnce>
+        <Fade triggerOnce >
           {/* <Lottie
           className="lottie-animation"
           animationData={confusedGuy}
@@ -79,7 +83,7 @@ export default function Home() {
         </Fade>
       </div>
 
-      <div className="solution-container">
+      <div className="solution-container" style={{backgroundColor:"#C0C5C1"}}>
         <div className="confused-lottie lottie-animation">
           <Fade triggerOnce>
             <Lottie
@@ -110,7 +114,7 @@ export default function Home() {
       </div>
 
       {/* TODO: CHANGE ICON IMAGES */}
-      <div className="how-it-works-container altText">
+      <div className="how-it-works-container altText" style={{backgroundColor:'#3F334D'}}>
         <Fade triggerOnce>
           <div className="how-it-works-header text--center">HOW IT WORKS !</div>
         </Fade>
@@ -138,7 +142,7 @@ export default function Home() {
         </Fade>
       </div>
 
-      <div className="extra-features-container">
+      <div className="extra-features-container" style={{backgroundColor:"#C0C5C1"}}>
         <Fade triggerOnce>
           <div className="extra-features-heading">benefits</div>
         </Fade>

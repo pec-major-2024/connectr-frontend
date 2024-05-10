@@ -76,7 +76,7 @@ export default function Note({
     return <></>;
   }
   return (
-    <Box
+    <Box 
       sx={{
         display: "flex",
         flexFlow: "column",
@@ -156,7 +156,7 @@ export default function Note({
             color="secondary"
             onClick={() => navigate(`/statistics/note/${noteId}`)}
             size={"normal"}
-            style={{ marginRight: '10px', width: '120px' }}
+            style={{ marginRight: '10px', width: '120px' ,backgroundColor:'#3F334D'}}
           >
             View Stats
           </Button>
@@ -165,14 +165,14 @@ export default function Note({
             color="secondary"
             onClick={() => navigate(`/matches/${noteId}`)}
             size={"normal"}
-            style={{ marginRight: '10px', width: '120px' }}
+            style={{ marginRight: '10px', width: '120px' ,backgroundColor:'#3F334D'}}
           >
             Matches
           </Button>
 
           {fav ? (
             <IconButton sx={{ marginLeft: "10px" }} onClick={handleFavourite}>
-              <FavoriteRoundedIcon color="error" sx={{ fontSize: "2.4rem" }} />
+              <FavoriteRoundedIcon color="#3F334D" sx={{ fontSize: "2.4rem" }} />
             </IconButton>
           ) : (
             <IconButton sx={{ marginLeft: "10px" }} onClick={handleFavourite}>

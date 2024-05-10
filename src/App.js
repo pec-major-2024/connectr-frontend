@@ -12,7 +12,7 @@ function App() {
   const {LoadingScreen} = useLoading();
 
   return (
-    <div>
+    <div style={{backgroundColor:"#C0C5C1"}}>
       <ToastContainer/>
       <LoadingScreen/>
       <Routes>

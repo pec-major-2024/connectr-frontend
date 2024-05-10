@@ -16,8 +16,9 @@ export default function Diary() {
   const [editNoteId, setEditNoteId] = useState(null);
 
   return (
-    <div className="diary-body">
+    <div className="diary-body" style={{backgroundColor:'#C0C5C1'}}>
       <Controller
+      style={{backgroundColor:'#C0C5C1'}}
         date={date}
         previous={previous}
         next={next}
@@ -44,9 +45,10 @@ export default function Diary() {
         />
       </ModalContainer>
 
-      <div className="diary-container">
+      <div className="diary-container" style={{backgroundColor:'#C0C5C1'}} >
         <Page
           date={date}
+          style={{backgroundColor:'#C0C5C1'}}
           notesAdded={notesAdded}
           setNotesAdded={setNotesAdded}
           notesEdited={notesEdited}

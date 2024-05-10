@@ -26,7 +26,7 @@ export default function Page({date, notesAdded, setNotesAdded, notesEdited, setN
   }, [date, notesAdded, notesEdited]); //call fetchNotes when date changes
 
   return (
-    <div className="page-container">
+    <div className="page-container" style={{backgroundColor:'#C0C5C1'}}>
       <LoadingScreen />
       {notes?.length === 0 ? (
         <h1 style={{fontFamily: 'Montserrat', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '2px'}}>No notes for this date !</h1>

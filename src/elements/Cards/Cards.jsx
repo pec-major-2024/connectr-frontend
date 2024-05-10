@@ -69,8 +69,9 @@ export default function Cards({
   };
 
   return (
-    <Card className="card" style={{ maxWidth: maxwidth }}>
+    <Card className="card" style={{ maxWidth: maxwidth} }>
       <CardHeader
+      style={{backgroundColor:'#282b30'}}
         title={title}        
         subheader={
           <Typography className="createdAt">
@@ -81,7 +82,7 @@ export default function Cards({
       />
 
       {!expanded ? (
-        <CardContent>
+        <CardContent style={{backgroundColor:'#3F334D'}}>
           <Typography className="previewContent" gutterbottom="true">
             {content}
           </Typography>
