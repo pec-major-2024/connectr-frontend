@@ -61,6 +61,7 @@ export default function NoteInput(props) {
                 multiline
                 rows={15}
                 margin="normal"
+                
                 value={content}
                 /* Title length used with content only */
                 onChange={(e) => setContent(e.target.value)}

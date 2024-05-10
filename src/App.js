@@ -34,8 +34,8 @@ function App() {
         <Route path="/statistics" location="/statistics" element={<PrivateRoute/>} >
           <Route path="/statistics" element={<Statistics />} />
         </Route>
-        <Route path="/matches" location="/matches" element={<PrivateRoute/>} >
-          <Route path="/matches" element={<Matches />} />
+        <Route path="/matches/:noteId" location="/matches/:noteId" element={<PrivateRoute/>} >
+          <Route path="/matches/:noteId" element={<Matches />} />
         </Route>
 
         <Route path="/favorites" location="/favorites" element={<PrivateRoute/>} >

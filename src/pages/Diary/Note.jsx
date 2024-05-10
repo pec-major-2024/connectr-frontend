@@ -163,7 +163,7 @@ export default function Note({
           <Button
             variant="contained"
             color="secondary"
-            onClick={() => navigate(`/matches`)}
+            onClick={() => navigate(`/matches/${noteId}`)}
             size={"normal"}
             style={{ marginRight: '10px', width: '120px' }}
           >

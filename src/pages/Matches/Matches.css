@@ -1,0 +1,37 @@
+.my-cell {
+    /* cursor: pointer; */
+    transition: background-color 0.3s ease;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+  
+  button#btn1 {
+    background-color: #2962ff;
+    color: aliceblue;
+    transition: background-color 0.3s ease; /* Enables color change on hover */
+  
+    &:hover {
+      background-color: #292929; /* New background color on hover */
+    }
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    margin: auto;
+  }
+
+  .myblock{
+
+  }
+
+  .myblock:hover{
+    background-color: #434f5b;
+  }
+  
