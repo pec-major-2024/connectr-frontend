@@ -172,11 +172,11 @@ export default function Note({
 
           {fav ? (
             <IconButton sx={{ marginLeft: "10px" }} onClick={handleFavourite}>
-              <FavoriteRoundedIcon color="#3F334D" sx={{ fontSize: "2.4rem" }} />
+              <FavoriteRoundedIcon  sx={{ fontSize: "2.4rem",color: "#3F334D" }} />
             </IconButton>
           ) : (
             <IconButton sx={{ marginLeft: "10px" }} onClick={handleFavourite}>
-              <FavoriteBorderOutlined sx={{ fontSize: "2.4rem" }} />
+              <FavoriteBorderOutlined sx={{ fontSize: "2.4rem", color: "#3F334D"}} />
             </IconButton>
           )}
         </Box>

@@ -28,7 +28,7 @@ export default function Favorite() {
   }, []);
 
   return (
-    <div className="favoriteBody">
+    <div className="favoriteBody" style={{minHeight:'100vh'}}>
       <Sidebar />
       <LoadingScreen/>
       <Tabs variant="scrollable" value={value} onChange={handleChange}>
@@ -36,8 +36,8 @@ export default function Favorite() {
       </Tabs>
 
       {/* Shows Fav Notes */}
-      <TabPanel value={value} index={0}>
-        <div className="favourite-container">
+      <TabPanel value={value} index={0} style={{ display:'flex' , justifyContent:'center',alignItems:'center',minHeight:'80vh'}}>
+        <div className="favourite-container"  >
           {notes?.length === 0 ? (
             <h1>No notes added in favourites</h1>
           ) : (

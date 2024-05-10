@@ -28,17 +28,18 @@ const Matches = () => {
   }, [noteId]);
 
   return (
-    <div>
+    <div style={{backgroundColor:'#C0C5C1'}}>
       <Sidebar />
+      <div id="main1">
       <LoadingScreen />
-      <div style={{ marginTop: '20px' }} >
+      <div style={{ marginTop: '20px' , backgroundColor:'#C0C5C1',minHeight:'85.8vh',display:'flex',justifyContent:'center',alignItems:'center'}} id="main1" >
         {loading ? (
           <div style={{ textAlign: 'center' }}>
             <img src="/loading.gif" alt="Loading..." style={{ width: '50px', height: '50px' }} />
           </div>
         ) : (
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <div className='my-cell' style={{ backgroundColor: '#303846', width: '100%', maxWidth: '410px', borderRadius: '8px', overflow: 'hidden' }}>
+          <div  style={{ display: 'flex', justifyContent: 'center' }}>
+            <div className='my-cell' style={{ backgroundColor: '#303846', minWidth: '350px', maxWidth: '410px', borderRadius: '8px', overflow: 'hidden',backgroundColor:'#3F334D'}}>
             <h2  style={{ textAlign: 'center', marginBottom: '20px', color: '#fff', fontWeight: 'bold' }}>Matched User</h2>
               
                 <div 
@@ -83,7 +84,9 @@ const Matches = () => {
           </div>
         )}
       </div>
+      </div>
     </div>
+
   );
 };
 

@@ -71,7 +71,7 @@ export default function Cards({
   return (
     <Card className="card" style={{ maxWidth: maxwidth} }>
       <CardHeader
-      style={{backgroundColor:'#282b30'}}
+      style={{backgroundColor:'#3F334D'}}
         title={title}        
         subheader={
           <Typography className="createdAt">
