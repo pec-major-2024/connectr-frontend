@@ -3,31 +3,30 @@ import { useLoading } from "../../utils/hooks/useLoading";
 import { Sidebar } from '../../components';
 import "./Matches.css"
 import { useParams } from 'react-router-dom';
+import { getMatches } from '../../utils/api/matches';
 
 const Matches = () => {
   const [match, setMatch] = useState();
+  const [noteKeywords, setNoteKeywords] = useState(null);
   const [loading, setLoading] = useState(false);
   const { setError, LoadingScreen } = useLoading();
   const noteId = useParams().noteId;
 
   useEffect(() => {
     const fetchMatches = async () => {
-      setLoading(true);
       try {
-        const response = await fetch(`https://localhost:8000/matching?noteId=${noteId}`);
-        if (!response.ok) {
-          throw new Error('Failed to fetch matches');
-        }
-        const data = await response.json();
-        setMatch(data);
+        const response = await getMatches(noteId);
+        setMatch(response.data?.matchedUser);
+        setNoteKeywords(response.data?.noteEmotion?.keywords);
         setLoading(false);
       } catch (error) {
         console.error('Error fetching matches:', error);
-        setLoading(false);
       }
     };
-    console.log("match is: ",match);
     fetchMatches();
+    setInterval(() => {
+      fetchMatches();
+    }, 60000);
   }, [noteId]);
 
   return (
@@ -42,12 +41,11 @@ const Matches = () => {
           </div>
         ) : match ?(
           <div  style={{ display: 'flex', justifyContent: 'center' }}>
-            <div className='my-cell' style={{ backgroundColor: '#303846', minWidth: '350px', maxWidth: '410px', borderRadius: '8px', overflow: 'hidden',backgroundColor:'#3F334D'}}>
+            <div className='my-cell' style={{ backgroundColor: '#303846', minWidth: '350px', maxWidth: '510px', borderRadius: '8px', overflow: 'hidden',backgroundColor:'#3F334D'}}>
               
 
               
             <h2  style={{ textAlign: 'center', marginBottom: '20px', color: '#fff', fontWeight: 'bold' }}>Matched User</h2>
-              
                 <div 
                 className='myblock'
                   style={{
@@ -62,14 +60,27 @@ const Matches = () => {
                   }}
                 >
                   <div style={{ marginBottom: '10px', color: '#fff' }}>
-                    <span style={{ fontWeight: 'bold' }}>Name:</span> {match?.match}
+                    <span style={{ fontWeight: 'bold' }}>Name:</span> {match?.firstName}
                   </div>
                   <div style={{ marginBottom: '10px', color: '#fff' }}>
-                    <span style={{ fontWeight: 'bold' }}>Age:</span> {match?.emotion}
+                    <span style={{ fontWeight: 'bold' }}>Age:</span> 21
                   </div>
                   <div style={{ marginBottom: '10px', color: '#fff' }}>
-                    <span style={{ fontWeight: 'bold' }}>City:</span> {match?.keyword}
+                    <span style={{ fontWeight: 'bold' }}>City:</span> Chandigarh
                   </div>
+
+                  <div style={{ marginBottom: '10px', color: '#fff' }}>
+                    <span style={{ fontWeight: 'bold' }}>Keywords:</span>
+                    <div className='truncate'>
+                      {noteKeywords?.map((word, index) => {
+                        return <span>
+                          <span>{word}</span> 
+                          {index !== noteKeywords.length - 1 && <span>, </span>}
+                        </span>
+                      })}
+                    </div>
+                  </div>
+
                   <button
                   id='btn1'
                     style={{
